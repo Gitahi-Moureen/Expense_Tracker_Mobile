@@ -24,11 +24,17 @@ class MainActivity : AppCompatActivity() {
     }
     fun displayExpenses(){
         val expense1 = Expense("Salary","KES 40,000","1 July 2024")
-        val expense2 = Expense("Salary","KES 50,000","2 July 2024")
+        val expense2 = Expense("Salary","KES 50,000","20 July 2024")
         val expense3 = Expense("Salary","KES 40,000","3 July 2024")
-        val expense4 = Expense("Salary","KES 30,000","4 July 2024")
+        val expense4 = Expense("Salary","KES 30,000","30 July 2024")
         val expense5 = Expense("Salary","KES 40,000","1 July 2024")
-        val myexpenses = listOf(expense1,expense2,expense3,expense4,expense5)
+        val expense6 = Expense("Salary","KES 50,000","20 July 2024")
+        val expense7 = Expense("Salary","KES 70,000","1 July 2024")
+        val myexpenses = listOf(expense1,expense2,expense3,expense4,expense5,expense6,expense7)
+
+
+        val expenseAdapter = ExpenseAdapter(myexpenses)
+        binding.rvExpenses.adapter = expenseAdapter
 
 
 
